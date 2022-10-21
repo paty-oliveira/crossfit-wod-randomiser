@@ -16,3 +16,7 @@ Bodyweight Crossfit WODs Randomiser that:
 - Javascript
 - Git
 
+## Wireframe
+
+![Wireframe part I](img/wireframe1.png)
+![Wireframe part II](img/wireframe2.png)
