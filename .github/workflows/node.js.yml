@@ -27,6 +27,9 @@ jobs:
       run: npm install
     - name: Build page
       run: npm run build
+    - name: Test
+      run: npm test
+
 
 #  test:
 #    runs-on: ubuntu-latest
