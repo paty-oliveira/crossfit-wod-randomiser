@@ -3,10 +3,10 @@ import "./WodMode.css";
 
 export function WodMode() {
     return (
-        <div className="wod-mode container">
-            <div className="row row-cols-2 gy-4 w-50">
+        <div className="wod-mode container-fluid">
+            <div className="row row-cols-2 gy-5 w-50">
                 <div className="col">
-                    <div className="card p-5 mode-card">
+                    <div className="card p-5 mode-card ">
                         <div className="card-body">AMRAP</div>
                     </div>
                 </div>
