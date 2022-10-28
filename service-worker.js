@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/crossfit-wod-randomiser/precache-manifest.7785a4e6c321d8d0df0b840512b91e29.js"
+  "/crossfit-wod-randomiser/precache-manifest.3c6b71d1f963333fd87aa3c3cfda9b92.js"
 );
 
 workbox.clientsClaim();
