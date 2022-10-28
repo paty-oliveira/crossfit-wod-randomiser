@@ -29,16 +29,3 @@ jobs:
       run: npm run build
     - name: Test
       run: npm test
-
-
-#  test:
-#    runs-on: ubuntu-latest
-#    strategy:
-#      matrix:
-#        node-version: [ 14.x, 16.x, 18.x ]
-#
-#    steps:
-#    - name: Run tests
-#      run: npm test
-
-
