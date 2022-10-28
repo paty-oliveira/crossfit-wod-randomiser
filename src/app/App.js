@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import 'animate.css';
+import React from "react";
+import "./App.css";
+import "animate.css";
 
 function App() {
   return (
