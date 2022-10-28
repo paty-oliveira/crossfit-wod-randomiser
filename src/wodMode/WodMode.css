@@ -1,0 +1,13 @@
+.wod-mode {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+}
+
+.mode-card {
+    background-color: #767981;
+    color: #f3bb38;
+    font-weight: bolder;
+}
