@@ -9,5 +9,6 @@
 .mode-card {
     background-color: #767981;
     color: #f3bb38;
-    font-weight: bolder;
+    font-weight: bold;
+    font-size: 28px;
 }
