@@ -8,7 +8,7 @@ export function Card(props) {
     return (
         <div className="col">
             <div className="card p-5 mode-card">
-                <button onClick={props.selectWodMode} className="mode-option">{wodMode}</button>
+                <button onClick={props.getWodMode} className="mode-option">{wodMode}</button>
             </div>
         </div>
     )

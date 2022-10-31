@@ -1,13 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import "./WodMode.css";
 import {Card} from "./Card";
 
 export function WodMode() {
 
     const wodModes = ["AMRAP", "RFT", "EMOM", "TABATA"]
+    const [currentMode, setCurrentMode] = useState("")
 
-    const selectWodMode = (event) => {
-        alert(event.currentTarget.textContent);
+    const getWodMode = (event) => {
+        const currentMode = event.currentTarget.textContent;
+        alert(currentMode);
+        setCurrentMode(currentMode);
     }
 
     return (
@@ -17,7 +20,7 @@ export function WodMode() {
                     wodModes.map(
                         mode => <Card
                                     mode={mode}
-                                    selectWodMode={selectWodMode}/>
+                                    getWodMode={getWodMode}/>
                     )
                 }
             </div>
