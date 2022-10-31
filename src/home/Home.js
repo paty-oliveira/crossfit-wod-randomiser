@@ -1,16 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Home.css";
 import {Card} from "./Card";
 
 export function Home() {
 
     const wodModes = ["AMRAP", "RFT", "EMOM", "TABATA"]
-    const [currentMode, setCurrentMode] = useState("")
+    // const [currentMode, setCurrentMode] = useState("")
 
     const getWodMode = (event) => {
         const currentMode = event.currentTarget.textContent;
         alert(currentMode);
-        setCurrentMode(currentMode);
+        // setCurrentMode(currentMode);
     }
 
     return (
