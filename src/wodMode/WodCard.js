@@ -1,4 +1,5 @@
 import React from "react";
+import "./WodCard.css";
 
 export function WodCard(props) {
 
@@ -6,8 +7,8 @@ export function WodCard(props) {
 
     return (
         <div className="col">
-            <div className="card p-5 mode-card ">
-                <div className="card-body">{wodMode}</div>
+            <div className="card p-5 mode-card">
+                <button onClick={props.selectWodMode} className="mode-option">{wodMode}</button>
             </div>
         </div>
     )

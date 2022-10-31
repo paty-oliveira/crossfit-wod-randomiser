@@ -1,0 +1,21 @@
+.mode-card {
+    background-color: #767981;
+    font-size: 28px;
+}
+
+.mode-option {
+    background-color: #767981;
+    border: #767981;
+    color: #f3bb38;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 30px;
+}
+
+.mode-option:hover {
+    color: white;
+}
+
+.mode-option:active {
+    color: white;
+}
