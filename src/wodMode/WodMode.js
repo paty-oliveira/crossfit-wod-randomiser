@@ -21,6 +21,9 @@ export function WodMode() {
                     )
                 }
             </div>
+            <div className="row w-100 start-button-div">
+                <button type="button" className="btn btn-success btn-lg w-50 p-3" id="start-button">START</button>
+            </div>
         </div>
     )
 }
