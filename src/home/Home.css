@@ -1,3 +1,15 @@
+.App-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 100px;
+    font-weight: bolder;
+}
+
 .wod-mode {
     display: flex;
     flex-direction: column;

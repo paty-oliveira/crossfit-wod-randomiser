@@ -1,15 +1,3 @@
 .App {
   text-align: center;
 }
-
-.App-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 45px;
-  color: white;
-  padding-top: 150px;
-  padding-bottom: 50px;
-  font-weight: bolder;
-}

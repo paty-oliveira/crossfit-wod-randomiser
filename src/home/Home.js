@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import "./WodMode.css";
+import "./Home.css";
 import {Card} from "./Card";
 
-export function WodMode() {
+export function Home() {
 
     const wodModes = ["AMRAP", "RFT", "EMOM", "TABATA"]
     const [currentMode, setCurrentMode] = useState("")
@@ -15,6 +15,7 @@ export function WodMode() {
 
     return (
         <div className="wod-mode container-fluid">
+            <header className="App-header animate__animated animate__bounce">Are you ready to be challenged?</header>
             <div className="row row-cols-2 gy-5 w-50">
                 {
                     wodModes.map(
