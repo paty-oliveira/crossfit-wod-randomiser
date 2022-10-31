@@ -1,7 +1,7 @@
 import React from "react";
-import "./WodCard.css";
+import "./Card.css";
 
-export function WodCard(props) {
+export function Card(props) {
 
     const wodMode = props.mode;
 

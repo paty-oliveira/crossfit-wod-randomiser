@@ -1,6 +1,6 @@
 import React from "react";
 import "./WodMode.css";
-import {WodCard} from "./WodCard";
+import {Card} from "./Card";
 
 export function WodMode() {
 
@@ -15,7 +15,7 @@ export function WodMode() {
             <div className="row row-cols-2 gy-5 w-50">
                 {
                     wodModes.map(
-                        mode => <WodCard
+                        mode => <Card
                                     mode={mode}
                                     selectWodMode={selectWodMode}/>
                     )
