@@ -11,7 +11,11 @@ export function Wod() {
 
     return (
         <div>
-
+            <h1>{name}</h1>
+            <h3>{mode}</h3>
+            <ul>
+                {description.map(wod => (<li key={wod.id}>{wod}</li>))}
+            </ul>
         </div>
     )
 }
