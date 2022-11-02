@@ -1,0 +1,33 @@
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wod {
+    background-color: #767981;
+    width: 30%;
+    padding-left: 25px;
+}
+
+#wod-title {
+    color: #f3bb38;
+    font-weight: bold;
+    padding: 100px;
+}
+
+#wod-mode {
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+#wod-exercises {
+    margin: 0;
+    padding: 25px 0 10px 0;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}

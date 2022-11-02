@@ -1,4 +1,5 @@
 import React from "react";
+import "./Wod.css";
 
 export function Wod() {
     const name = "Example 1";
@@ -10,12 +11,16 @@ export function Wod() {
     ]
 
     return (
-        <div>
-            <h1>{name}</h1>
-            <h3>{mode}</h3>
-            <ul>
-                {description.map(wod => (<li key={wod.id}>{wod}</li>))}
-            </ul>
+        <div className="container-fluid">
+            <h1 className="card-title" id="wod-title">{name}</h1>
+            <div className="card wod">
+                <div className="card-body">
+                    <h2 className="card-subtitle" id="wod-mode">{mode}</h2>
+                    <ul id="wod-exercises">
+                        {description.map(wod => (<p>{wod}</p>))}
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }

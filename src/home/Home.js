@@ -15,7 +15,7 @@ export function Home() {
 
     return (
         <div className="App container">
-            <div className="wod-mode container-fluid">
+            <div className="wod-mode">
                 <header className="App-header animate__animated animate__bounce">Are you ready to be challenged?</header>
                 <div className="row row-cols-2 gy-5 w-50">
                     {
@@ -31,6 +31,5 @@ export function Home() {
                 </div>
             </div>
         </div>
-
     )
 }
