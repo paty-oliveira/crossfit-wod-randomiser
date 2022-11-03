@@ -1,5 +1,6 @@
 import React from "react";
 import "./Wod.css";
+import { Timer} from "../timer/Timer";
 
 export function Wod() {
     const name = "Example 1";
@@ -21,9 +22,10 @@ export function Wod() {
                     </ul>
                 </div>
             </div>
-            <div className="row buttons-container">
-                <button type="button" className="btn btn-success w-100" id="new-button">NEW</button>
-            </div>
+            <Timer />
+            {/*<div className="row buttons-container">*/}
+            {/*    <button type="button" className="btn btn-success w-100" id="new-button">NEW</button>*/}
+            {/*</div>*/}
         </div>
     )
 }

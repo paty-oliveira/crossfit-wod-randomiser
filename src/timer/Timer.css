@@ -1,0 +1,21 @@
+.time {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.container-timer {
+    width: 30%;
+    padding-top: 2%;
+}
+
+.timer-button {
+    font-weight: bolder;
+    padding: 30%;
+}
+
+.timer-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
