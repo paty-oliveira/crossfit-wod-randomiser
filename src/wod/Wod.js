@@ -21,6 +21,9 @@ export function Wod() {
                     </ul>
                 </div>
             </div>
+            <div className="row buttons-container">
+                <button type="button" className="btn btn-success w-100" id="new-button">NEW</button>
+            </div>
         </div>
     )
 }
