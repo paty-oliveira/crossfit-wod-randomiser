@@ -8,8 +8,8 @@ import {Routes, Route} from "react-router-dom";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/wod" element={<Wod />} />
+      <Route path="crossfit-wod-randomiser/" element={<Home />}/>
+      <Route path="crossfit-wod-randomiser/wod" element={<Wod />} />
     </Routes>
   );
 }
