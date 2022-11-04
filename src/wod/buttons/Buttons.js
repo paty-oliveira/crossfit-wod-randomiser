@@ -18,10 +18,10 @@ export function Buttons(props) {
             <div className="col-5  mx-auto">
                 <div className="d-flex align-items-center justify-content-evenly timer-button-container">
                     <button onClick={startOrPauseTimer} type="button" className="btn btn-primary timer-button">
-                        {isActive ? "Pause" : "Start"}
+                        {isActive ? "PAUSE" : "START"}
                     </button>
-                    <button onClick={stopTimer} type="button" className="btn btn-danger timer-button">Reset</button>
-                    <button onClick={handleClickShuffleButton} type="button" className="btn btn-success timer-button">Shuffle</button>
+                    <button onClick={stopTimer} type="button" className="btn btn-danger timer-button">RESET</button>
+                    <button onClick={handleClickShuffleButton} type="button" className="btn btn-success timer-button">SHUFFLE</button>
                 </div>
             </div>
         </div>
