@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./Timer.css"
+import {Buttons} from "../buttons/Buttons";
 
 export function Timer() {
 
@@ -46,17 +47,9 @@ export function Timer() {
                 <span>:</span>
                 <span className="second">{second}</span>
             </div>
-            <div className="buttons row">
-                <div className="col-6 mx-auto">
-                    <div className="d-flex align-items-center justify-content-evenly timer-button-container">
-                        <button onClick={startOrPauseTimer} type="button" className="btn btn-primary timer-button">
-                        {isActive ? "Pause" : "Start"}
-                        </button>
-                        <button onClick={stopTimer} type="button" className="btn btn-danger timer-button">Reset</button>
-                    </div>
-                </div>
-
-            </div>
+            <Buttons isActive={isActive}
+                     handleStartOrPauseButton={startOrPauseTimer}
+                     handleStopTimer={stopTimer} />
         </div>
     )
 }
