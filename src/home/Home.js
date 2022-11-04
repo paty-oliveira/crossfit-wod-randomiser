@@ -1,16 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Home.css";
 import {Card} from "./card/Card";
+import {wods} from "../database/wods";
+import {useNavigate} from "react-router-dom";
 
 export function Home() {
 
     const wodModes = ["AMRAP", "RFT", "EMOM", "TABATA"]
-    // const [currentMode, setCurrentMode] = useState("")
+    const [currentMode, setCurrentMode] = useState("")
+    // const [currentWod, setCurrentWod] = useState({});
+    const navigate = useNavigate();
 
     const getWodMode = (event) => {
         const currentMode = event.currentTarget.textContent;
-        alert(currentMode);
-        // setCurrentMode(currentMode);
+        setCurrentMode(currentMode);
+    }
+
+    const handleClickStartButton = () => {
+        const filteredWods = wods.workouts.filter(wod => {return wod.mode === currentMode});
+        const selectedWod = selectRandomWod(filteredWods);
+        console.log(selectedWod);
+        navigate("./wod");
     }
 
     return (
@@ -27,9 +37,18 @@ export function Home() {
                     }
                 </div>
                 <div className="row w-100 start-button-div">
-                    <button type="button" className="btn btn-success btn-lg w-50 p-3" id="start-button">START</button>
+                    <button type="button"
+                            className="btn btn-success btn-lg w-50 p-3"
+                            id="start-button"
+                            onClick={handleClickStartButton}>
+                        START
+                    </button>
                 </div>
             </div>
         </div>
     )
+}
+
+const selectRandomWod = (wods) => {
+    return wods[Math.floor(Math.random() * wods.length)];
 }

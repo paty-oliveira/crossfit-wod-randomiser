@@ -1,4 +1,4 @@
-{
+export const wods = {
   "workouts": [
     {
       "id": "9a6b766f-d5a2-46a1-9715-dee8ef300fca",
