@@ -12,10 +12,6 @@
     padding: 30px;
 }
 
-.mode-option:hover {
-    color: white;
-}
-
-.mode-option:active {
+.mode-option:hover, .mode-option:focus, .mode-option:active {
     color: white;
 }
