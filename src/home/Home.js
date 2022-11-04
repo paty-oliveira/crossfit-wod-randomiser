@@ -3,22 +3,21 @@ import "./Home.css";
 import {Card} from "./card/Card";
 import {wods} from "../database/wods";
 import {useNavigate} from "react-router-dom";
-import {selectRandomWod} from "../utils/utils";
+import {selectRandomWod, filterWods} from "../utils/utils";
 
 export function Home() {
 
-    const wodModes = ["AMRAP", "RFT", "EMOM", "TABATA"]
-    const [currentMode, setCurrentMode] = useState("")
+    const workoutMode = ["AMRAP", "RFT", "EMOM", "TABATA"]
+    const [currentWorkoutMode, setWorkoutMode] = useState("")
     // const [currentWod, setCurrentWod] = useState({});
     const navigate = useNavigate();
 
     const getWodMode = (event) => {
-        const currentMode = event.currentTarget.textContent;
-        setCurrentMode(currentMode);
+        setWorkoutMode(event.currentTarget.textContent);
     }
 
     const handleClickStartButton = () => {
-        const filteredWods = wods.workouts.filter(wod => {return wod.mode === currentMode});
+        const filteredWods = filterWods(wods, currentWorkoutMode);
         const selectedWod = selectRandomWod(filteredWods);
         console.log(selectedWod);
         navigate("./wod");
@@ -30,7 +29,7 @@ export function Home() {
                 <header className="App-header animate__animated animate__bounce">Are you ready to be challenged?</header>
                 <div className="row row-cols-2 gy-5 w-50">
                     {
-                        wodModes.map(
+                        workoutMode.map(
                             mode => <Card
                                 mode={mode}
                                 getWodMode={getWodMode}/>
