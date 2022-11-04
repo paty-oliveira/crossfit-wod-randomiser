@@ -3,6 +3,7 @@ import "./Home.css";
 import {Card} from "./card/Card";
 import {wods} from "../database/wods";
 import {useNavigate} from "react-router-dom";
+import {selectRandomWod} from "../utils/utils";
 
 export function Home() {
 
@@ -47,8 +48,4 @@ export function Home() {
             </div>
         </div>
     )
-}
-
-const selectRandomWod = (wods) => {
-    return wods[Math.floor(Math.random() * wods.length)];
 }
