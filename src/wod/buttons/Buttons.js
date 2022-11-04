@@ -1,11 +1,17 @@
 import React from "react";
 import "./Buttons.css";
+import {useNavigate} from "react-router-dom";
 
 export function Buttons(props) {
 
     const isActive = props.isActive;
     const startOrPauseTimer = props.handleStartOrPauseButton;
     const stopTimer = props.handleStopTimer;
+    const navigator = useNavigate();
+
+    const handleClickShuffleButton = () => {
+        navigator("../crossfit-wod-randomiser");
+    }
 
     return (
         <div className="buttons">
@@ -15,7 +21,7 @@ export function Buttons(props) {
                         {isActive ? "Pause" : "Start"}
                     </button>
                     <button onClick={stopTimer} type="button" className="btn btn-danger timer-button">Reset</button>
-                    <button type="button" className="btn btn-success timer-button">Shuffle</button>
+                    <button onClick={handleClickShuffleButton} type="button" className="btn btn-success timer-button">Shuffle</button>
                 </div>
             </div>
         </div>

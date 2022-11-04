@@ -1,8 +1,9 @@
 import React from "react";
 import "./Wod.css";
-import { Timer} from "./timer/Timer";
+import {Timer} from "./timer/Timer";
 
 export function Wod() {
+
     const name = "Example 1";
     const mode = "EMOM";
     const description = [

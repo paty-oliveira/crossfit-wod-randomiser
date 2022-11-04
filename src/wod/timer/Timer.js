@@ -2,12 +2,13 @@ import React, {useEffect, useState} from "react";
 import "./Timer.css"
 import {Buttons} from "../buttons/Buttons";
 
-export function Timer() {
+export function Timer(props) {
 
     const [second, setSecond] = useState('00');
     const [minute, setMinute] = useState('00');
     const [isActive, setIsActive] = useState(false);
     const [counter, setCounter] = useState(0);
+    const handleClickShuffleButton = props.handleClickShuffleButton;
 
     useEffect(() => {
         let intervalId;
@@ -49,7 +50,9 @@ export function Timer() {
             </div>
             <Buttons isActive={isActive}
                      handleStartOrPauseButton={startOrPauseTimer}
-                     handleStopTimer={stopTimer} />
+                     handleStopTimer={stopTimer}
+                     handleClickShuffleButton={handleClickShuffleButton}
+                />
         </div>
     )
 }
