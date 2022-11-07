@@ -3,9 +3,9 @@ import "./Home.css";
 import {Card} from "./card/Card";
 import {wods} from "../database/wods";
 import {useNavigate} from "react-router-dom";
-import {selectRandomWod, filterWods} from "../utils/utils";
+import {selectRandomWod, filterWod} from "../utils/utils";
 import {useSelector, useDispatch} from "react-redux";
-import {setWorkoutMode, selectWorkoutMode} from "./workoutSlice";
+import {setWorkoutMode, selectWorkoutMode, setWod} from "./workoutSlice";
 
 export function Home() {
 
@@ -19,10 +19,11 @@ export function Home() {
     }
 
     const handleClickStartButton = () => {
-        const filteredWods = filterWods(wods, currentWorkoutMode);
-        const selectedWod = selectRandomWod(filteredWods);
-        // Dispatch selectedWod to store
+        const filteredWod = filterWod(wods, currentWorkoutMode);
+        console.log(filteredWod)
+        const selectedWod = selectRandomWod(filteredWod);
         console.log(selectedWod)
+        dispatch(setWod(selectedWod));
         navigate("./wod");
     }
 

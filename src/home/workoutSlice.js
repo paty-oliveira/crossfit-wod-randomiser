@@ -14,7 +14,7 @@ const options = {
         },
 
         setWod: (state, action) => {
-            state.wodInfo = action.payload
+            state.wodInfo = action.payload;
         }
     }
 };

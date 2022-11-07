@@ -51,7 +51,19 @@ describe('workoutSlice reducer', () => {
 
             const expectedState = {
                 mode: "AMARAP",
-                wodInfo: wodInfoPayload
+                wodInfo: {
+                    "id": "42852023-f3b0-4dac-893c-89dedcf2d6d0",
+                    "name": "Harris",
+                    "mode": "AMRAP",
+                    "wodTime": "20 minutes",
+                    "exercises": [
+                        "5 Wall Walks",
+                        "10 Burpee Broad Jumps",
+                        "15 Air Squats",
+                        "20 Sit-Ups"
+                    ],
+                    "createdAt": 1666632700
+                }
             };
 
             const actualState = reducer(initialState, setWod(wodInfoPayload));

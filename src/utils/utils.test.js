@@ -1,4 +1,4 @@
-import {selectRandomWod, filterWods} from "./utils";
+import {selectRandomWod, filterWod} from "./utils";
 
 describe('selectRandomWod', () => {
     it('should not return any list index when the WODs list is empty', function () {
@@ -52,8 +52,8 @@ describe('filterWods', () => {
                 ]
         };
 
-        const actualResult = filterWods(workouts, wodMode);
-        const expectedResult = {
+        const actualResult = filterWod(workouts, wodMode);
+        const expectedResult = [{
             "id": "c3aea9e8-c510-4892-bed4-2815df07072f",
             "name": "The Longest Mile",
             "mode": "RFT",
@@ -69,7 +69,7 @@ describe('filterWods', () => {
                 "100 meter Run"
             ],
             "createdAt": 1666633208
-        };
+        }];
 
         expect(actualResult).toEqual(expectedResult);
     }
