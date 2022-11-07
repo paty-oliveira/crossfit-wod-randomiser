@@ -17,6 +17,8 @@ const options = {
 
 export const workoutSlice = createSlice(options);
 
+export const selectWorkoutMode = (state) => state.workout.mode;
+
 export const { setWorkoutMode} = workoutSlice.actions;
 
 export default workoutSlice.reducer;

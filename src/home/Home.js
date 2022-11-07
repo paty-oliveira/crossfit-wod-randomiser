@@ -4,16 +4,19 @@ import {Card} from "./card/Card";
 import {wods} from "../database/wods";
 import {useNavigate} from "react-router-dom";
 import {selectRandomWod, filterWods} from "../utils/utils";
+import {useSelector, useDispatch} from "react-redux";
+import {setWorkoutMode, selectWorkoutMode} from "./workoutSlice";
 
 export function Home() {
 
-    const workoutMode = ["AMRAP", "RFT", "EMOM", "TABATA"]
-    const [currentWorkoutMode, setWorkoutMode] = useState("")
+    const workoutMode = ["AMRAP", "RFT", "EMOM", "TABATA"];
     // const [currentWod, setCurrentWod] = useState({});
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const currentWorkoutMode = useSelector(selectWorkoutMode);
 
     const getWodMode = (event) => {
-        setWorkoutMode(event.currentTarget.textContent);
+        dispatch(setWorkoutMode(event.currentTarget.textContent));
     }
 
     const handleClickStartButton = () => {
