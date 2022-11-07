@@ -1,5 +1,7 @@
 # CrossFit WOD Randomiser
 
+![example workflow](https://github.com/paty-oliveira/crossfit-wod-randomiser/actions/workflows/node.js.yml/badge.svg)
+
 ## Business Requirements
 Bodyweight Crossfit WODs Randomiser that:
 - Show a random CrossFit WOD based on the different types of WODs:
