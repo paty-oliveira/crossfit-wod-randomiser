@@ -1,7 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
-    mode: ""
+    mode: "",
+    wodInfo: {}
 };
 
 const options = {
@@ -10,8 +11,11 @@ const options = {
     reducers: {
         setWorkoutMode: (state, action) => {
             state.mode = action.payload;
-        }
+        },
 
+        setWod: (state, action) => {
+            state.wodInfo = action.payload
+        }
     }
 };
 
@@ -19,7 +23,7 @@ export const workoutSlice = createSlice(options);
 
 export const selectWorkoutMode = (state) => state.workout.mode;
 
-export const { setWorkoutMode} = workoutSlice.actions;
+export const { setWorkoutMode, setWod } = workoutSlice.actions;
 
 export default workoutSlice.reducer;
 

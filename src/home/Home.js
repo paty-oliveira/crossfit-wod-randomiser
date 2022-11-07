@@ -10,7 +10,6 @@ import {setWorkoutMode, selectWorkoutMode} from "./workoutSlice";
 export function Home() {
 
     const workoutMode = ["AMRAP", "RFT", "EMOM", "TABATA"];
-    // const [currentWod, setCurrentWod] = useState({});
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const currentWorkoutMode = useSelector(selectWorkoutMode);
@@ -22,7 +21,8 @@ export function Home() {
     const handleClickStartButton = () => {
         const filteredWods = filterWods(wods, currentWorkoutMode);
         const selectedWod = selectRandomWod(filteredWods);
-        console.log(selectedWod);
+        // Dispatch selectedWod to store
+        console.log(selectedWod)
         navigate("./wod");
     }
 
