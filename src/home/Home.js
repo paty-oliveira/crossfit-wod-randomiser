@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Home.css";
 import {Card} from "./card/Card";
 import {wods} from "../database/wods";
