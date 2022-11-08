@@ -1,10 +1,12 @@
 import React from "react";
 import "./Wod.css";
 import {Timer} from "./timer/Timer";
+import {useSelector} from "react-redux";
+import {selectWorkoutName} from "../home/workoutSlice";
 
 export function Wod() {
 
-    const name = "Example 1";
+    const name = useSelector(selectWorkoutName);
     const mode = "EMOM";
     const description = [
         "6 Plank Toe Taps",
