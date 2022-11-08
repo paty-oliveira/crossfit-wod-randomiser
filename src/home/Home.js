@@ -20,9 +20,7 @@ export function Home() {
 
     const handleClickStartButton = () => {
         const filteredWod = filterWod(wods, currentWorkoutMode);
-        console.log(filteredWod)
         const selectedWod = selectRandomWod(filteredWod);
-        console.log(selectedWod)
         dispatch(setWod(selectedWod));
         navigate("./wod");
     }
