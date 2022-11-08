@@ -2,7 +2,7 @@ import React from "react";
 import "./Wod.css";
 import {Timer} from "./timer/Timer";
 import {useSelector} from "react-redux";
-import {selectWorkoutName, selectWorkoutMode, selectWorkoutExercise, selectWorkoutTime} from "../home/workoutSlice";
+import {selectWorkoutName, selectWorkoutMode, selectWorkoutExercise, selectWorkoutTime, selectWorkoutRoundsNumber} from "../home/workoutSlice";
 
 export function Wod() {
 
@@ -10,7 +10,7 @@ export function Wod() {
     const mode = useSelector(selectWorkoutMode);
     const description = useSelector(selectWorkoutExercise);
     const time = useSelector(selectWorkoutTime);
-    const rounds = "4 Rounds For Time";
+    const rounds = useSelector(selectWorkoutRoundsNumber);
 
     return (
         <div className="container-fluid">
