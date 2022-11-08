@@ -5,7 +5,7 @@ import {wods} from "../database/wods";
 import {useNavigate} from "react-router-dom";
 import {selectRandomWod, filterWod} from "../utils/utils";
 import {useSelector, useDispatch} from "react-redux";
-import {setWorkoutMode, selectWorkoutMode, setWod} from "./workoutSlice";
+import {setWorkoutMode, selectWorkoutMode, setWod} from "../slices/workoutSlice";
 
 export function Home() {
 

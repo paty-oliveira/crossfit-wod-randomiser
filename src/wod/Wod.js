@@ -2,7 +2,13 @@ import React from "react";
 import "./Wod.css";
 import {Timer} from "./timer/Timer";
 import {useSelector} from "react-redux";
-import {selectWorkoutName, selectWorkoutMode, selectWorkoutExercise, selectWorkoutTime, selectWorkoutRoundsNumber} from "../home/workoutSlice";
+import {
+    selectWorkoutName,
+    selectWorkoutMode,
+    selectWorkoutExercise,
+    selectWorkoutTime,
+    selectWorkoutRoundsNumber
+} from "../slices/workoutSlice";
 
 export function Wod() {
 

@@ -2,7 +2,7 @@ import React from "react";
 import "./Buttons.css";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {cleanWorkoutState} from "../../home/workoutSlice";
+import {cleanWorkoutState} from "../../slices/workoutSlice";
 
 export function Buttons(props) {
 
