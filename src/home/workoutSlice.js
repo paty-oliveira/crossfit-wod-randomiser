@@ -23,6 +23,8 @@ export const workoutSlice = createSlice(options);
 
 export const selectWorkoutMode = (state) => state.workout.mode;
 
+export const selectWorkoutName = (state) => state.workout.wodInfo.name;
+
 export const { setWorkoutMode, setWod } = workoutSlice.actions;
 
 export default workoutSlice.reducer;

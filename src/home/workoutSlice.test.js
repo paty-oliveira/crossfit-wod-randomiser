@@ -1,4 +1,4 @@
-import reducer, {setWorkoutMode, setWod} from "./workoutSlice";
+import reducer, {setWorkoutMode, setWod, selectWorkoutMode, selectWorkoutName} from "./workoutSlice";
 
 describe('workoutSlice reducer', () => {
         it('should return default state', function () {
@@ -17,10 +17,10 @@ describe('workoutSlice reducer', () => {
                 wodInfo: {}
             };
 
-            const userChoice = "AMARAP";
+            const userChoice = "AMRAP";
 
             const expectedState = {
-                mode: "AMARAP",
+                mode: "AMRAP",
                 wodInfo: {}
             };
 
@@ -31,7 +31,7 @@ describe('workoutSlice reducer', () => {
 
         it('should update the wod info when the user clicks on START button', function () {
             const initialState = {
-                mode: "AMARAP",
+                mode: "AMRAP",
                 wodInfo: {}
             };
 
@@ -50,7 +50,7 @@ describe('workoutSlice reducer', () => {
             };
 
             const expectedState = {
-                mode: "AMARAP",
+                mode: "AMRAP",
                 wodInfo: {
                     "id": "42852023-f3b0-4dac-893c-89dedcf2d6d0",
                     "name": "Harris",
@@ -69,7 +69,44 @@ describe('workoutSlice reducer', () => {
             const actualState = reducer(initialState, setWod(wodInfoPayload));
 
             expect(actualState).toEqual(expectedState)
+        });
 
+        it('should select workout mode from state', function () {
+            const initialState = {
+                workout: {
+                    mode: "AMRAP",
+                    wodInfo: {}
+                }
+            };
+
+            const expectedResult = "AMRAP";
+
+            const actualResult = selectWorkoutMode(initialState);
+
+            expect(actualResult).toEqual(expectedResult)
+
+        });
+
+        it('should select workout name from state', function () {
+            const initialState = {
+                workout: {
+                    mode: "AMRAP",
+                    wodInfo: {
+                        id: "9a6b766f-d5a2-46a1-9715-dee8ef300fca",
+                        name: "Freemium",
+                        mode: "AMRAP",
+                        wodTime: "8 minutes",
+                        exercises: ["move 1", "move 2"],
+                        createdAt: 1666632445
+                    }
+                }
+            };
+
+            const expectedResult = "Freemium";
+
+            const actualResult = selectWorkoutName(initialState);
+
+            expect(actualResult).toEqual(expectedResult)
         });
     }
 );
