@@ -2,17 +2,13 @@ import React from "react";
 import "./Wod.css";
 import {Timer} from "./timer/Timer";
 import {useSelector} from "react-redux";
-import {selectWorkoutName, selectWorkoutMode} from "../home/workoutSlice";
+import {selectWorkoutName, selectWorkoutMode, selectWorkoutExercise} from "../home/workoutSlice";
 
 export function Wod() {
 
     const name = useSelector(selectWorkoutName);
     const mode = useSelector(selectWorkoutMode);
-    const description = [
-        "6 Plank Toe Taps",
-        "4 Candlesticks",
-        "2 Knee Tap Push-Ups"
-    ]
+    const description = useSelector(selectWorkoutExercise);
 
     return (
         <div className="container-fluid">
