@@ -9,7 +9,8 @@ export function Wod() {
     const name = useSelector(selectWorkoutName);
     const mode = useSelector(selectWorkoutMode);
     const description = useSelector(selectWorkoutExercise);
-    const time = "8 minutes"
+    const time = "8 minutes";
+    const rounds = "4 Rounds For Time";
 
     return (
         <div className="container-fluid">
@@ -20,7 +21,9 @@ export function Wod() {
                     <ul id="wod-exercises">
                         {description.map(wod => (<p>{wod}</p>))}
                     </ul>
-                    <p id="wod-time">{time}</p>
+                    <p id="wod-time">
+                        { mode !== "RFT" ? time : rounds }
+                    </p>
                 </div>
             </div>
             <Timer />
