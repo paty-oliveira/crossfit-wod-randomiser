@@ -4,7 +4,9 @@ import reducer, {
     selectWorkoutMode,
     selectWorkoutName,
     selectWorkoutExercise,
-    selectWorkoutTime } from "./workoutSlice";
+    selectWorkoutTime,
+    selectWorkoutRoundsNumber
+} from "./workoutSlice";
 
 describe('workoutSlice reducer', () => {
         it('should return default state', function () {
@@ -157,7 +159,28 @@ describe('workoutSlice reducer', () => {
             const actualResult = selectWorkoutTime(initialState);
 
             expect(actualResult).toEqual(expectedResult);
+        });
 
+        it('should select the number of rounds from state', function () {
+            const initialState = {
+                workout: {
+                    mode: "AMRAP",
+                    wodInfo: {
+                        id: "9a6b766f-d5a2-46a1-9715-dee8ef300fca",
+                        name: "Freemium",
+                        mode: "AMRAP",
+                        numberRounds: "3 Rounds For Time",
+                        exercises: ["move 1", "move 2"],
+                        createdAt: 1666632445
+                    }
+                }
+            };
+
+            const expectedResult = "3 Rounds For Time";
+
+            const actualResult = selectWorkoutRoundsNumber(initialState);
+
+            expect(actualResult).toEqual(expectedResult);
         });
     }
 );

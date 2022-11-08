@@ -29,6 +29,8 @@ export const selectWorkoutExercise = (state) => state.workout.wodInfo.exercises;
 
 export const selectWorkoutTime = (state) => state.workout.wodInfo.wodTime;
 
+export const selectWorkoutRoundsNumber = (state) => state.workout.wodInfo.numberRounds;
+
 export const { setWorkoutMode, setWod } = workoutSlice.actions;
 
 export default workoutSlice.reducer;
