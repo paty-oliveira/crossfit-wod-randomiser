@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/crossfit-wod-randomiser/static/css/main.a066f7a4.css",
-    "main.js": "/crossfit-wod-randomiser/static/js/main.0b085beb.js",
+    "main.css": "/crossfit-wod-randomiser/static/css/main.7f3f93cd.css",
+    "main.js": "/crossfit-wod-randomiser/static/js/main.89b7a3a4.js",
     "static/js/787.62b191b6.chunk.js": "/crossfit-wod-randomiser/static/js/787.62b191b6.chunk.js",
     "index.html": "/crossfit-wod-randomiser/index.html",
-    "main.a066f7a4.css.map": "/crossfit-wod-randomiser/static/css/main.a066f7a4.css.map",
-    "main.0b085beb.js.map": "/crossfit-wod-randomiser/static/js/main.0b085beb.js.map",
+    "main.7f3f93cd.css.map": "/crossfit-wod-randomiser/static/css/main.7f3f93cd.css.map",
+    "main.89b7a3a4.js.map": "/crossfit-wod-randomiser/static/js/main.89b7a3a4.js.map",
     "787.62b191b6.chunk.js.map": "/crossfit-wod-randomiser/static/js/787.62b191b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a066f7a4.css",
-    "static/js/main.0b085beb.js"
+    "static/css/main.7f3f93cd.css",
+    "static/js/main.89b7a3a4.js"
   ]
 }
