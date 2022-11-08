@@ -1,4 +1,10 @@
-import reducer, {setWorkoutMode, setWod, selectWorkoutMode, selectWorkoutName, selectWorkoutExercise} from "./workoutSlice";
+import reducer, {
+    setWorkoutMode,
+    setWod,
+    selectWorkoutMode,
+    selectWorkoutName,
+    selectWorkoutExercise,
+    selectWorkoutTime } from "./workoutSlice";
 
 describe('workoutSlice reducer', () => {
         it('should return default state', function () {
@@ -129,6 +135,29 @@ describe('workoutSlice reducer', () => {
             const actualResult = selectWorkoutExercise(initialState);
 
             expect(actualResult).toEqual(expectedResult)
+        });
+
+        it('should select workout time from state', function () {
+            const initialState = {
+                workout: {
+                    mode: "AMRAP",
+                    wodInfo: {
+                        id: "9a6b766f-d5a2-46a1-9715-dee8ef300fca",
+                        name: "Freemium",
+                        mode: "AMRAP",
+                        wodTime: "8 minutes",
+                        exercises: ["move 1", "move 2"],
+                        createdAt: 1666632445
+                    }
+                }
+            };
+
+            const expectedResult = "8 minutes";
+
+            const actualResult = selectWorkoutTime(initialState);
+
+            expect(actualResult).toEqual(expectedResult);
+
         });
     }
 );
