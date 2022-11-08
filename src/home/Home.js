@@ -19,10 +19,14 @@ export function Home() {
     }
 
     const handleClickStartButton = () => {
-        const filteredWod = filterWod(wods, currentWorkoutMode);
-        const selectedWod = selectRandomWod(filteredWod);
-        dispatch(setWod(selectedWod));
-        navigate("./wod");
+        if (currentWorkoutMode !== "") {
+            const filteredWod = filterWod(wods, currentWorkoutMode);
+            const selectedWod = selectRandomWod(filteredWod);
+            dispatch(setWod(selectedWod));
+            navigate("./wod");
+        } else {
+            alert("You must to choose a WOD mode!")
+        }
     }
 
     return (
