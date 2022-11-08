@@ -15,6 +15,10 @@ const options = {
 
         setWod: (state, action) => {
             state.wodInfo = action.payload;
+        },
+
+        cleanWorkoutState: (state, action) => {
+            return initialState;
         }
     }
 };
@@ -31,7 +35,7 @@ export const selectWorkoutTime = (state) => state.workout.wodInfo.wodTime;
 
 export const selectWorkoutRoundsNumber = (state) => state.workout.wodInfo.numberRounds;
 
-export const { setWorkoutMode, setWod } = workoutSlice.actions;
+export const { setWorkoutMode, setWod, cleanWorkoutState } = workoutSlice.actions;
 
 export default workoutSlice.reducer;
 

@@ -5,7 +5,8 @@ import reducer, {
     selectWorkoutName,
     selectWorkoutExercise,
     selectWorkoutTime,
-    selectWorkoutRoundsNumber
+    selectWorkoutRoundsNumber,
+    cleanWorkoutState
 } from "./workoutSlice";
 
 describe('workoutSlice reducer', () => {
@@ -37,7 +38,33 @@ describe('workoutSlice reducer', () => {
             expect(actualState).toEqual(expectedState);
         });
 
-        it('should update the wod info when the user clicks on START button', function () {
+    it('should restore workout state', function () {
+        const initialState = {
+            workout: {
+                mode: "AMRAP",
+                wodInfo: {
+                    id: "9a6b766f-d5a2-46a1-9715-dee8ef300fca",
+                    name: "Freemium",
+                    mode: "AMRAP",
+                    wodTime: "8 minutes",
+                    exercises: ["move 1", "move 2"],
+                    createdAt: 1666632445
+                }
+            }
+        };
+
+        const expectedState = {
+            mode: "",
+            wodInfo: {}
+        };
+
+        const actualResult = reducer(initialState, cleanWorkoutState());
+
+        expect(actualResult).toEqual(expectedState)
+
+    });
+
+    it('should update the wod info when the user clicks on START button', function () {
             const initialState = {
                 mode: "AMRAP",
                 wodInfo: {}

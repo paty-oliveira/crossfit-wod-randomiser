@@ -1,6 +1,8 @@
 import React from "react";
 import "./Buttons.css";
 import {useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {cleanWorkoutState} from "../../home/workoutSlice";
 
 export function Buttons(props) {
 
@@ -8,8 +10,10 @@ export function Buttons(props) {
     const startOrPauseTimer = props.handleStartOrPauseButton;
     const stopTimer = props.handleStopTimer;
     const navigator = useNavigate();
+    const dispatch = useDispatch();
 
     const handleClickShuffleButton = () => {
+        dispatch(cleanWorkoutState());
         navigator("../crossfit-wod-randomiser");
     }
 
