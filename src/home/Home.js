@@ -6,6 +6,7 @@ import {useNavigate} from "react-router-dom";
 import {selectRandomWod, filterWod} from "../utils/utils";
 import {useSelector, useDispatch} from "react-redux";
 import {setWorkoutMode, selectWorkoutMode, setWod} from "../slices/workoutSlice";
+import swal from "sweetalert";
 
 export function Home() {
 
@@ -25,9 +26,14 @@ export function Home() {
             dispatch(setWod(selectedWod));
             navigate("./wod");
         } else {
-            alert("You must to choose a WOD mode!")
+            swal({
+                title: "Attention!",
+                text: "You must select a WOD mode!",
+                icon: "warning",
+                button: "OK!"
+            });
         }
-    }
+     }
 
     return (
         <div className="App container">
