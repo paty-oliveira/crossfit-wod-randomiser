@@ -14,7 +14,7 @@
 #wod-title {
     color: #f3bb38;
     font-weight: bold;
-    padding: 100px;
+    padding: 70px;
 }
 
 #wod-mode {
@@ -46,4 +46,10 @@
 
 #new-button {
     font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .wod {
+        width: 80%;
+    }
 }

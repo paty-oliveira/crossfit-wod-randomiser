@@ -15,3 +15,46 @@
 .mode-option:hover, .mode-option:focus, .mode-option:active {
     color: white;
 }
+
+@media only screen and (max-width: 768px)  {
+    .col {
+        width: 100%;
+    }
+
+    .mode-card {
+        font-size: 12px;
+    }
+
+    .mode-option {
+        padding: 0;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .col {
+        width: 100%;
+    }
+
+    .mode-card {
+        font-size: 12px;
+    }
+
+    .mode-option {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .col {
+        width: 100%;
+    }
+
+    .mode-card {
+        font-size: 12px;
+    }
+
+    .mode-option {
+        padding: 0;
+    }
+}
