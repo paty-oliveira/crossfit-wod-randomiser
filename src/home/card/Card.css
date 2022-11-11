@@ -1,9 +1,9 @@
-.mode-card {
+.workout-card {
     background-color: #767981;
     font-size: 28px;
 }
 
-.mode-option {
+.workout-type {
     background-color: #767981;
     border: #767981;
     color: #f3bb38;
@@ -12,7 +12,7 @@
     padding: 30px;
 }
 
-.mode-option:hover, .mode-option:focus, .mode-option:active {
+.workout-type:hover, .workout-type:focus, .workout-type:active {
     color: white;
 }
 
@@ -21,11 +21,11 @@
         width: 100%;
     }
 
-    .mode-card {
+    .workout-card {
         font-size: 12px;
     }
 
-    .mode-option {
+    .workout-type {
         padding: 0;
     }
 }
@@ -36,11 +36,11 @@
         width: 100%;
     }
 
-    .mode-card {
+    .workout-card {
         font-size: 12px;
     }
 
-    .mode-option {
+    .workout-type {
         padding: 0;
     }
 }
