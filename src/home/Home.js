@@ -37,25 +37,23 @@ export function Home() {
 
     return (
         <div className="App container">
-            <div className="wod-mode">
-                <header className="App-header animate__animated animate__bounce">Are you ready to be challenged?</header>
-                <div className="row row-cols-2 gy-5 w-50">
-                    {
-                        workoutMode.map(
-                            mode => <Card
-                                mode={mode}
-                                getWodMode={getWodMode}/>
-                        )
-                    }
-                </div>
-                <div className="row w-100 start-button-div">
-                    <button type="button"
-                            className="btn btn-success btn-lg w-50 p-3"
-                            id="start-button"
-                            onClick={handleClickStartButton}>
-                        START
-                    </button>
-                </div>
+            <header className="App-header animate__animated animate__bounce">Are you ready to be challenged?</header>
+            <div className="row row-cols-2 gy-5 w-50">
+                {
+                    workoutMode.map(
+                        mode => <Card
+                            mode={mode}
+                            getWodMode={getWodMode}/>
+                    )
+                }
+            </div>
+            <div className="row w-100 start-button-container">
+                <button type="button"
+                        className="btn btn-success btn-lg w-50 p-3"
+                        id="start-button"
+                        onClick={handleClickStartButton}>
+                    START
+                </button>
             </div>
         </div>
     )
